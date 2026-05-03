@@ -1,0 +1,44 @@
+tasklist | findstr java
+taskkill /F /IM java.exe
+
+
+Step 1: Start from main
+git checkout main
+git pull origin main
+
+
+Always begin with the latest main.
+
+🔧 Step 2: Create a feature branch
+git checkout -b feature-branch
+
+
+Work on your changes here.
+
+🔧 Step 3: Commit and push
+git add .
+git commit -m "Your message"
+git push -u origin feature-branch
+
+
+
+🔧 Step 4: Raise a Pull Request
+- Go to GitHub → switch to feature-branch.
+- Click Compare & pull request → merge into main.
+
+🔧 Step 5: Sync your local main
+After the PR is merged:
+git checkout main
+git pull origin main
+
+
+
+🔧 Step 6: Clean up
+Delete the feature branch locally and remotely:
+git branch -d feature-branch
+git push origin --delete feature-branch
+
+
+
+🔧 Step 7: Repeat
+For the next task, always branch off the updated main
